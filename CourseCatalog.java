@@ -1,13 +1,11 @@
-import java.util.*;
-
 
 public class CourseCatalog {
     //create one string array to store course details
+    String selectedCourse;
     public void setCourseDetails(int courseNumber){
-        System.out.println("Enter the course number: ");
 
-        Scanner scan = new Scanner(System.in);
-        String selectedCourse;
+        // Scanner scan = new Scanner(System.in);
+        
 
         //create variables for course name, course code, available seats
         System.out.println("Course selected: " + courseNumber);
@@ -27,15 +25,15 @@ public class CourseCatalog {
                 System.out.println(selectedCourse);
                 break;
             default:
+            selectedCourse = "NULL";
                 System.out.println("Invalid Course");
         }
 
 
 
     }
-    public String enrollCourse(String selectedCourse){
-
-        return selectedCourse;
-    }
+    // public String enrollCourse(){
+    //     return selectedCourse;
+    // }
 
 }

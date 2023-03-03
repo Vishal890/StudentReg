@@ -36,10 +36,15 @@ public class StudentRegistration {
         }
         //Course details generation
         System.out.println("Please select your course Number:");
-        System.out.println("Computer Science : 15432 \n Electrical Engineering : 15424 \n Mechanical Engineering :15515");
+        System.out.println("Computer Science : 15432 \n Electrical Engineering : 15424 \n Mechanical Engineering :15515 \n >>");
         int courseNumber = sc.nextInt();
-        courseCatalog cc = new courseCatalog();
+        CourseCatalog cc = new CourseCatalog();
         cc.setCourseDetails(courseNumber);
+        // System.out.println(cc.enrollCourse());
+
+        //Exam Results
+        Exams ex = new Exams();
+        ex.fetchResults();
         sc.close();
     }
 }
