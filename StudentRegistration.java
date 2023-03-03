@@ -34,6 +34,12 @@ public class StudentRegistration {
         } else {
         System.out.println("Invalid student details. Please try again.");
         }
+        //Course details generation
+        System.out.println("Please select your course Number:");
+        System.out.println("Computer Science : 15432 \n Electrical Engineering : 15424 \n Mechanical Engineering :15515");
+        int courseNumber = sc.nextInt();
+        courseCatalog cc = new courseCatalog();
+        cc.setCourseDetails(courseNumber);
         sc.close();
     }
 }
