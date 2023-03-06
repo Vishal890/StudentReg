@@ -11,13 +11,13 @@ public class Exams {
     }
 
     public void calGrade(double i) {
-        if (i > 90 && i < 100) {
+        if (i >= 90 && i <= 100) {
             System.out.println("You have passed with DISTINCTION ");
-        } else if (i > 80 && i < 90) {
+        } else if (i >= 80 && i < 90) {
             System.out.println("You have passed withA GRADE ");
-        } else if (i > 60 && i < 80) {
+        } else if (i >= 60 && i < 80) {
             System.out.println("You have passed with B GRADE ");
-        } else if (i < 60 && i > 40) {
+        } else if (i >= 40 && i < 60) {
             System.out.println("You have passed with C GRADE ");
         } else {
             System.out.println("failed the exam ");
@@ -36,12 +36,12 @@ public class Exams {
         System.out.println("Enter the MARKS of students: ");
 
         for (int i = 0; i < n; i++) {
-            System.out.print("ENTER THE MARKS OF SUBJECT" + i + " :");
+            System.out.print("ENTER THE MARKS OF SUBJECT " + i + " : ");
             res[i] = sc.nextInt();
             sum = sum + res[i];
         }
         System.out.println(Arrays.toString(res) + "\nTotal Marks obtained: "+ sum );
-        System.out.println("Your percentage is :" + e.calpecentage(sum, n));
+        System.out.println("Your percentage is : " + e.calpecentage(sum, n));
         e.calGrade(e.per);
         sc.close();
     }
